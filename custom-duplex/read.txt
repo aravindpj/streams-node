@@ -1,1 +1,0 @@
-This is a source file from which our custom Duplex Stream (customDuplex.js) reads!

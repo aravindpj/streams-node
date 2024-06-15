@@ -44,9 +44,6 @@
 
 //   for (let i = 0; i < 1000000; i++) {
 //     const buff = Buffer.from(` ${i} `, "utf-8");
-
-//     // console.log(stream.writableBuffer);
-//     // console.log(stream.writableHighWaterMark);
 //     stream.write(buff);
 //   }
 //   console.timeEnd("writeMany");
@@ -54,8 +51,8 @@
 
 const fs = require("node:fs/promises");
 
-// Execution Time: 2.7 s
-// Number of Writes: 10,000,000
+// Execution Time: 300ms
+// Memory Usage: 50MB
 (async () => {
   console.time("writeMany");
   const fileHandle = await fs.open("test.txt", "w");
@@ -87,7 +84,7 @@ const fs = require("node:fs/promises");
 
   let i = 0;
 
-  const numberOfWrites = 10000000;
+  const numberOfWrites = 1000000;
 
   const writeMany = () => {
     while (i < numberOfWrites) {
