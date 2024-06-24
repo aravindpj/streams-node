@@ -1,0 +1,1 @@
+Incrementing 255 by 1 in a system using bytes will cause what's called an overflow. This means the value exceeds the maximum limit a byte can hold.
